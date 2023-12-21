@@ -1,3 +1,4 @@
+#!/bin/bash
 ####################### original #######################
 # If not running interactively, don't do anything
 case $- in
@@ -244,5 +245,5 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export TERM="xterm-256color"                      # getting proper colors
 export PYTHONPATH="/home/karan/Templates/ravens"
 export XMONAD_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/xmonad" # xmonad.hs is expected to stay here
-export EDITOR=nvim
-export VISUAL=code
+export EDITOR="nvim"
+export VISUAL="code"

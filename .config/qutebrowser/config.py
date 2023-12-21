@@ -232,24 +232,27 @@ config.bind(',v', 'hint links spawn --detach mpv --force-window=yes --ytdl=no --
 config.bind(',V', 'spawn --detach mpv --ytdl=no --force-window=yes --script-opts=ytdl_hooks-all_formats="yes" {url}')   
 
 
-#import dracula
+c.url.start_pages = ['https://www.google.com']
+
+# load dracula
+import dracula.draw
 
 # Load existing settings made via :set
 config.load_autoconfig()
-#
-# dracula.draw.blood(c, {
-#     'spacing': {
-#         'vertical': 6,
-#         'horizontal': 8
-#     }
-# })
 
-
-c.url.start_pages = ['https://www.google.com']
+dracula.draw.blood(c, {
+    'spacing': {
+        'vertical': 6,
+        'horizontal': 8
+    }
+})
 
 
 
-#config.source('/home/karan/.config/qutebrowser/qutebrowser-themes/themes/onedark.py')
+# load theme
+config.source('/home/karan/.config/qutebrowser/qutebrowser-themes/themes/onedark.py')
 c.downloads.open_dispatcher = "~/Templates/music.sh {}"
 c.content.autoplay = False
 c.content.user_stylesheets = ['~/.config/qutebrowser/loadingScreen.css']
+
+

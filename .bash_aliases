@@ -66,21 +66,24 @@ alias mocp='mocp -M "$XDG_CONFIG_HOME"/moc -O MOCDir="$XDG_CONFIG_HOME"/moc'
 #############################################################
 #######               Git Alias                    ##########
 #############################################################
-alias gitlog-a='git log --all --oneline --graph'
-alias addup='git add -u'
-alias addall='git add .'
-alias branch='git branch'
-alias checkout='git checkout'
+
 alias clone='git clone'
-alias commit='git commit -m'
 alias fetch='git fetch'
 alias pull='git pull origin'
 alias push='git push origin'
+
 alias stat='git status'  # 'status' is protected name so using 'stat' instead
+alias addup='git add -u'
+alias addall='git add .'
+alias commit='git commit -m'
+
 alias tag='git tag'
 alias newtag='git tag -a'
+alias branch='git branch'
+alias checkout='git checkout'
 
-
+alias gitlog-a='git log --all --oneline --graph'
+alias gitlog='git log -n 10 --oneline '
 #############################################################
 #######               Apt Alias                    ##########
 #############################################################
@@ -92,4 +95,11 @@ alias aptu='sudo apt update '
 alias aptug='sudo apt upgrade '
 alias aptgi='sudo apt-get install '
 alias aptin='apt info '
+alias aptp='apt purge '
 
+#############################################################
+#######               Snap Alias                   ##########
+#############################################################
+alias snapi='sudo snap install '
+alias snapr='sudo snap remove '
+alias snapin='snap info '
